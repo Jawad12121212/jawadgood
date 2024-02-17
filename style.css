@@ -1,0 +1,397 @@
+@font-face {
+    font-family: futura;
+    src: url(FuturaNowHeadlineExtraBold.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: futura;
+}
+
+*::selection {
+    background: #000;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.hover {
+    height: 200px;
+    width: 200px;
+    background: rgb(184, 224, 209);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+.play {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-size: 1.5vw;
+    border-radius: 50%;
+    z-index: 999;
+    position: fixed;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.main {
+    padding: 0px 2vw;
+}
+
+.main h4 {
+    border-bottom: 1px solid black;
+    margin-bottom: 2vw;
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar img {
+    width: 130px;
+}
+
+.page1 .right {
+    display: flex;
+    padding-top: 1vw;
+}
+
+.page1 .right .buy i {
+    margin-left: 3vw;
+    cursor: pointer;
+}
+
+.page1 .right h5 {
+    margin: 0px 4vw 0px 0px;
+}
+
+.page1 .right h5 a {
+    text-decoration: none;
+    color: rgb(102, 100, 100);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.page1 .right h5 a:hover {
+    color: rgb(161, 160, 160);
+}
+
+.page1 h1 {
+    font-size: 16VW;
+    line-height: 12vw;
+    letter-spacing: -1vw;
+    margin-top: 4vw;
+}
+
+.page2 {
+    height: 100vh;
+    width: 100%;
+    background: grey;
+    position: relative;
+}
+
+.page2 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page3 .box {
+    height: 100%;
+    width: 32%;
+    overflow: hidden;
+    position: relative;
+}
+
+.page3 .box img {
+    object-fit: cover;
+    /* object-position: center; */
+    height: 100%;
+    width: 100%;
+    scale: 1.1;
+}
+
+.page3 .box .dets {
+    height: 50px;
+    width: 70%;
+    background: #E5F0D6;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 14%;
+    /* transition: 1s; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page3 .box .dets .circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: black;
+}
+
+.page3 .box .dets::after {
+    content: "";
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    top: 99%;
+    background: #E5F0D6;
+    border-radius: 20px;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.page3 .box .dets:hover {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.page3 .box .dets:hover::after {
+    height: 200px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.page4 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page4 .left h1 {
+    font-size: 4vw;
+    width: 90%;
+    line-height: 4vw;
+    margin-top: 2vw;
+}
+
+.page4 .right p {
+    width: 80%;
+    padding-left: 6vw;
+    padding-top: 2vw;
+}
+
+.page5 {
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.page5 .items {
+    height: 45%;
+    width: 45%;
+    margin-bottom: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page5 .items img {
+    height: 90%;
+    /* width: ; */
+}
+
+.liine {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    font-size: 10px;
+}
+
+.page6 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+}
+
+.page6 .head {
+    width: 80%;
+}
+
+.page6 .head h1 {
+    font-size: 5vw;
+    line-height: 5vw;
+    text-align: center;
+}
+
+.page6 button {
+    width: 25vw;
+    height: 60px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin: 5vw 0px 1vw 0px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.page6 button:hover {
+    color: rgb(202, 190, 190);
+}
+
+.page6 p {
+    font-size: 14px;
+}
+
+.page7 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /* background: red; */
+}
+
+.page7 .left {
+    width: 35%;
+}
+
+.page7 .left p {
+    width: 68%;
+    margin: 2vw 0px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page7 .right {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.page7 .right img {
+    width: 49%;
+    object-fit: cover;
+    /* object-position: center; */
+    scale: 1;
+    /* position: fixed; */
+}
+
+.email {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email h1 {
+    font-size: 3vw;
+}
+
+.email i {
+    font-size: 2vw;
+}
+
+.page8 {
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.page8 h5 {
+    color: rgb(202, 196, 196);
+}
+
+.page8 .up {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3vw;
+}
+
+.page8 .up .middle {
+    text-align: center;
+
+}
+
+.page8 .up .middle span {
+    font-size: 13px;
+    color: rgb(190, 182, 182);
+    margin-left: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page8 .up .left p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.page8 .up .left h5 {
+    margin-bottom: 1vw;
+}
+
+.page8 .up .right h5 {
+    margin-bottom: 1vw;
+}
+
+.page8 .up .right {
+    text-align: right;
+}
+
+.page8 .up .right p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.page8 .down {
+    width: 100%;
+    height: 20vh;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page8 .down p{
+    margin-top: 4vw;
+    width: 75%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
